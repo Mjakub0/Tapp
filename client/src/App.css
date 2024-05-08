@@ -2,8 +2,8 @@
   box-sizing: border-box;
 }
 body{  
-  background: linear-gradient(to top right, #B9FFFC, #7579E7);
-  background-size: 200% 200%;  
+  background-color: #969c92;
+  background-size: 300% 300%;  
 }
 .container{
   padding: 10px;
@@ -21,13 +21,16 @@ body{
   cursor: pointer;
 }
 .btn-add{
-  background-color: rgba(67, 51, 148, 0.619);
+  background-color: #848a81;
   color: white;
   font-weight: 550;
 }
+.btn-add:hover{
+  transform: scale(1.1);
+}
 .addContainer{
   position: absolute;
-  background: linear-gradient(to top right, #B9FFFC, #7579E7);
+  background-color: #9fce7e;
   background-size: 200% 200%;
   left: 0;
   right: 0;
@@ -51,7 +54,7 @@ body{
   font-style:inherit;
   font-size: 22px;
   font-weight: 600;
-  background: -webkit-linear-gradient(left, #7579E7, #7579E7);
+  background: -webkit-linear-gradient(left, #848a81, #848a81);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
@@ -64,21 +67,24 @@ body{
   border-radius: 8px;
   font-weight: 550;
   background-color: rgb(255, 255, 255);
-  color: #7579E7;
+  color: #848a81;
   border: none;
   outline: none;
   font-style:inherit;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 .addContainer form input:focus {
-  color:rgba(84, 186, 249, 0.881);
+  color:#a6e27a;
 }
 .addContainer form button{
-  background: linear-gradient( 45deg, #7579E7, #A3D8F4);
+  background: #848a81;
   color:rgba(255, 255, 255);
   font-weight: 700;
   margin-top: 20px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.addContainer form button:hover{
+  transform: scale(1.1);
 }
 .addContainer form .close-btn{
   margin-left: auto;
@@ -89,10 +95,13 @@ body{
   justify-content: center;
   align-items: center;
   border-radius: 3px;
-  background: #7579E7;
+  background: #848a81;
   cursor: pointer;
   color:rgb(255, 255, 255);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.addContainer form .close-btn:hover{
+  transform: scale(1.1);
 }
 .tableContainer{
   margin-top: 50px;
@@ -102,7 +111,7 @@ body{
   background-color: rgba(255, 255, 255, 0.5);
 }
 .tableContainer table thead tr{
-  background-color: rgba(29, 0, 172, 0.5);
+  background-color: #848a81;
   color: #ffffff;
 }
 .tableContainer table {
@@ -116,16 +125,22 @@ text-align: center;
 }
 .tableContainer table tbody tr td{
   border-width: 50%;
-  color: #7579E7;
-  font-weight: 500;
+  color: #848a81;
+  font-weight: 700;
 }
 .btn-edit,
 .btn-delete{
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   padding: 5px 10px;
   margin: 0px 10px;
-  background-color: #86B6F6;
+  background-color: #a2d87c;
+}
+.btn-edit:hover{
+  transform: scale(1.1);
+}
+.btn-delete:hover{
+  transform: scale(1.1);
 }
 
 .tableContainer table tbody tr:nth-child(even) {
@@ -139,4 +154,97 @@ text-align: center;
   border-collapse: collapse;
   border-radius: 8px;
   overflow: hidden; 
+}
+
+.sidebar {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  bottom: 0;
+  width: 200px;
+  height: 120px;
+  background-color: #848a81;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  margin: 8px;
+  border-radius: 8px;
+}
+
+.btn-notes,
+.btn-makePlan {
+  margin-bottom: 10px;
+  width: 150px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 8px;
+  color: white;
+  background-color: #a6e27a;
+  border: none;
+  cursor: pointer;
+}
+
+.contents {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.626);  
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  height: fit-content;
+}
+.container {
+  display: flex;
+}
+
+.btn-notes:hover{
+  transform: scale(1.1);
+}
+.btn-makePlan:hover{
+  transform: scale(1.1);
+}
+
+.btn-notes:active {
+  color: white;
+  background-color: #1c2317b4;
+}
+.btn-makePlan:active {
+  color: white;
+  background-color: #1c2317b4;
+}
+.contents{
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Arial', sans-serif; 
+  font-size: 32px; 
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 20px; 
+}
+
+
+h3 {
+  font-family: 'Arial', sans-serif; 
+  font-size: 24px;
+  font-weight: normal; 
+  color: #666; 
+  margin-bottom: 10px; 
+}
+.logo{
+  background-image: url('Logotr.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 100px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -50,8 +50,8 @@ app.post("/createPlan", async (req, res) => {
     } catch (err) {
         res.status(500).send({ success: false, message: err.message });
     }
-});
-*/
+});*/
+
 app.post("/createPlan", async (req, res) => {
     try {
         // Tento kód sa pokúsi vykonať
@@ -67,9 +67,11 @@ app.post("/createPlan", async (req, res) => {
         res.send({ success: true, message: "data saved successfully", data : data});
     } catch (err) {
         // Ak nastane chyba v bloku try, tento kód sa vykoná
+        console.error(err);  // Pridané logovanie chýb
         res.status(500).send({ success: false, message: err.message });
     }
 });
+
 
 //update dát
 //http://localhost:8080/update
@@ -109,4 +111,3 @@ mongoose.connect("mongodb://localhost:27017/app")
     app.listen(PORT,()=>console.log("Server is running"))
 })
 .catch((err)=>console.log(err))
-
